@@ -1,0 +1,16 @@
+#import "../fragments/userProfile.graphql"
+
+query Me {
+  me {
+    id
+
+    phoneCredentials {
+      id
+      phone
+    }
+
+    profile {
+      ...UserProfileFields
+    }
+  }
+}
